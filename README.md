@@ -1,2 +1,2 @@
 # Drowsy-Driver-Detection-System
-Deep Learning Model to detect drowsy state of driver
+ System detects drowsy state of driver and subsequently alerts to avoid accidents.
