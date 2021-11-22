@@ -5,7 +5,7 @@
   2. State Detector-Detects the state using trained Deep Learning ML model.
   3. Alert Manager-Receives the response from state detector and broadcasts the necessary alerts as per level of seriousness.
 
-# Tech Stack used:
+# Tech Stack used
 1.Keras (for building CNN model)
 2.OpenCV
 3.Flask
@@ -22,7 +22,7 @@ The requirement for this Python project is a webcam through which we will captur
 4.Pygame – pip install pygame (to play alarm sound).
 5.Flask - pip install  Flask (for deployment of Deep Learning Model)
 
-# File structure :
+# File structure 
 
 1.haarcascade files-> folder contains of the xml files that are needed to detect the face and eyes of the person.
 2.static folder-> contains html  css files for homepage of webapp and js file for homepage.
@@ -31,7 +31,7 @@ The requirement for this Python project is a webcam through which we will captur
 5.model.py ->  file contains the program through which we built our classification model by training on the dataset.The implementation of convolutional neural network  is in               this file.
 
 
-# Instructions to run:
+# Instructions to run
 $ python  app.py
 
 
