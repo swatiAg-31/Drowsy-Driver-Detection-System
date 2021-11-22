@@ -6,12 +6,12 @@
   3. Alert Manager-Receives the response from state detector and broadcasts the necessary alerts as per level of seriousness.
 
 # Tech Stack used
-1.Keras (for building CNN model)
-2.OpenCV
-3.Flask
-4.HTML,CSS
-5.JavaScript
-6.Bootstrap
+1. Keras (for building CNN model)
+2. OpenCV
+3. Flask
+4. HTML,CSS
+5. JavaScript
+6. Bootstrap
 
 # Project Prerequisites
 The requirement for this Python project is a webcam through which we will capture images. You need to have Python (3.6 version recommended) installed on your system, then using pip, you can install the necessary packages.
