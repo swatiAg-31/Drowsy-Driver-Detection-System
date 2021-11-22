@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta name = "viewport" content="width=device-width, initial-scale=1.0">
+  <link rel= "stylesheet" href= "{{ url_for('static',filename='styles/home.css') }}">
+  <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Glory:wght@100&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Allison&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&display=swap" rel="stylesheet">
+  <script src="home.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+  <title>Droive</title>
+  </head>
+  
+  <body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-black">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Droive</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarColor02">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="http://127.0.0.1:5000/Aboutus.html">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact us</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  </nav>
+
+  <div class = "container1">
+    <div class="sky" class ="animate__animated animate__animated animate_infinite">
+        <div class="car"></div>
+    </div>
+    <div class="message">
+        <h1>Seek Safety</h1>
+        <p>Your destination is waiting for you!<p>
+        <button onclick = "display()"></button>
+    </div>
+  </div>
+  
+  <h1 id="video_head"> Introducing <span id="video_span_head">Droive<span></h1>
+  <div class="intro_video">
+       <img id = "usr_video" onload = "hide()" src="{{ url_for('video') }}" width="50%"/>
+       <video id = "manual_video" src="Droive - Google Chrome 2021-09-04 18-40-06.mp4" controls>
+         Your browser doesn't support the video
+       </video>
+  </div>
+
+  <div class = "explanations">
+
+  <div class ="QandA">
+  <div class = "Why">
+        <h1 class="animate__animated animate__pulse animate__infinite">Why is that usefull?</h1>
+        <p>Fatigue has costly effects on the safety, health, and quality of life.</p>
+  </div>
+  <div class = "What">
+        <h1 class="animate__animated animate__pulse animate__infinite">What's it?</h1>
+        <p>The drowsiness alert system, tracks the driver's drowsiness and alerts</br> them whenever he/she closes her eyes dozing</p>
+  </div>
+  <div class = "how">
+        <h1 class="animate__animated animate__pulse animate__infinite">How it works?</h1>
+        <p>It works by using ML</pl>
+  </div>
+  </div>
+  <div class="play_logo" >
+        <h1 class="animate__animated animate__tada animate__infinite">Facts!</h1>
+  </div>
+  </div>
+  <div class="alert_sys">
+        <div class="start_sys_heading">
+             <h1>Click here to start : </h1>
+        </div>
+        <div class="start_sys">
+        <form action = 'http://127.0.0.1:5000/Home/' method = "post">
+            <input type="submit" name="submit" value="The Drwosiness Alert Sytem"></input>
+        </form>
+        </div>
+  </div>
+  <div class="footer">
+        
+        <div class = "member_intro">
+                 <h3>Developed by:</h3>
+                 <ul>
+                 <li><h4>Swathi,</h4>
+                 <li><h4>Rohitha,</h4>
+                 <li><h4>Meera,</h4>
+                 <li><h4>Akshaya,</h4>
+                 </ul>
+        </div>
+        <div id="team1" class ="animate__animated animate__animated animate_infinite" src = "car-removebg-preview"></div>
+        <div class="contact_us">
+                 <h2>We'd like to hear from you :) </h2>
+                 <form id="contact">
+                 <label for = "email">E-mail</label><br>
+                 <input type="text" name = "email" id = "email" placeholder="abcdefg@xyz.com"></input><br>
+                 <label for = "message">Message</label><br>
+                 <input type="text" name = "message" id = "message"></input><br>
+                 <input type="submit" id="contact_submit">
+                 </form>
+        </div>
+  </div>
+  </body>
+</html>
