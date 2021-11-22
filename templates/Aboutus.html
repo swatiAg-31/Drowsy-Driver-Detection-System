@@ -1,0 +1,43 @@
+<html>
+  <head>
+  <meta name = "viewport" content="width=device-width, initial-scale=1.0">
+  <link rel= "stylesheet" href= "{{ url_for('static',filename='styles/home.css') }}">
+  <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Glory:wght@100&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Allison&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+  <title>Droive</title>
+  </head>
+  
+  <body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-black">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="{{url_for('index')}}">Droive</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarColor02">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="Aboutus.html">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{url_for('contact')}}">Contact us</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  </nav>
+  <div class = "container">
+  <h1 class="About_us" style = "margin-top: 2vw;">About us</h1>
+  <p>
+  Furthermore, demonstrating your employees and their responsibilities would be very useful as seeing the talents of your team might be something your visitors are looking for. Optionally, you can include the links of their social profiles, websites or blogs and you can use organizational charts if you have a large company as well.
+
+Last but not least, creating a “meet the team” page expresses your company’s identity. While creating your company a personality, you are also increasing brand awareness and certainly, this is something that helps your brand to grow.
+  </p>
+  </div>
+  </body>
+  <html>

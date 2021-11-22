@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta name = "viewport" content="width=device-width, initial-scale=1.0">
+  <link rel= "stylesheet" href= "{{ url_for('static',filename='styles/home.css') }}">
+  <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Glory:wght@100&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Allison&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&display=swap" rel="stylesheet">
+  <script src="{{ url_for('static',filename='Scripts/home.js') }}"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+  <title>Droive</title>
+  </head>
+  
+  <body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-black">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Droive</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarColor02">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="{{url_for('Aboutus')}}">Aboutus</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{url_for('contact')}}">Contact us</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  </nav>
+
+  <div class = "container1">
+    <div class="sky" class ="animate__animated animate__animated animate_infinite">
+        <div class="car"></div>
+    </div>
+    <div class="message">
+        <h1>Seek Safety</h1>
+        <p>Your destination is waiting for you!<p>
+        <button id = "starter">Start Alert</button>
+        <script type="text/javascript">
+          document.getElementById("starter").onclick = function () {
+           location.href = "{{url_for('Droive')}}";
+            };
+        </script>
+    </div>
+  </div>
+  
+  <h1 id="video_head"> Introducing <span id="video_span_head">Droive<span></h1>
+  <div class="intro_video">
+       <hr>
+       <video id = "manual_video" src="{{ url_for('static',filename='intro.mp4') }}" controls>
+         Your browser doesn't support the video
+       </video>
+       <hr>
+  </div>
+  <button id = "stops" onclick = "#">Stop</button>
+
+  <form action="{{ url_for('get_info')}}" id = "alert_other_info" method="post">
+  <fieldset>
+    <legend>Inform your near once...</legend>
+  </fieldset>
+  <label for="Name">Your Name:</label>
+  <input type="text" id="Name" name="name" placeholder="Abcdefg"><br><br>
+  <label for="r_email_Id">Receiver Email:</label>
+  <input type="text" id="r_email_Id" name="r_email" placeholder="xyz@gmail.com"><br><br>
+  <button type="submit" id="alert_submits" onclick = "submits()">Send Alert</button>
+  </form>
+
+  <div class = "explanations">
+
+  <div class ="QandA">
+  <div class = "Why">
+        <h1 class="animate__animated animate__pulse animate__infinite">Why is that usefull?</h1>
+        <p>One out of 4 vehicle accidents are caused by drowsy driving and one in 25 adult <br>
+             drivers report that they have fallen asleep at the wheel inthe past 30 days</p>
+  </div>
+  <div class = "What">
+        <h1 class="animate__animated animate__pulse animate__infinite">What's it?</h1>
+        <p>Detects drowsy state of driver and subsequently alerts to avoid accidents</p>
+  </div>
+  <div class = "How">
+        <h1 class="animate__animated animate__pulse animate__infinite">How it works?</h1>
+        <p>State Detector-Detects the state using trained Deep Learning MLmodel then alert <br>
+           Manager-Receives the response from state detector andbroadcasts the necessary <br>
+           alerts as per level of seriousness.</pl>
+  </div>
+  </div>
+  <div class="play_logo" >
+        <h1 class="animate__animated animate__tada animate__infinite">Facts!</h1>
+  </div>
+  </div>
+  <div class="alert_sys">
+        <div class="start_sys_heading">
+             <h1>Click here to start : </h1>
+        </div>
+        <div class="start_sys">
+         <button id="starter2">The Drwosiness Alert System</button>
+         <script type="text/javascript">
+          document.getElementById("starter2").onclick = function () {
+           location.href = "{{url_for('Droive')}}";
+            };
+        </script>
+        </div>
+  </div>
+  <div class="footer">
+        
+        <div class = "member_intro">
+                 <h3>Developed by:</h3>
+                 <ul>
+                 <li><h4>Swati</h4>
+                 <li><h4>Rohitha</h4>
+                 <li><h4>Meera</h4>
+                 <li><h4>Akshaya</h4>
+                 </ul>
+        </div>
+        <img id="team1" src ="{{url_for('static',filename='car-removebg-preview.png')}}" class ="animate__animated animate__animated animate_infinite"></img>
+        <div class="contact_us">
+                 <h2>We'd like to hear from you :) </h2>
+                 <form id="contact">
+                 <label for = "email">E-mail</label><br>
+                 <input type="text" name = "email" id = "email" placeholder="abcdefg@xyz.com"></input><br>
+                 <label for = "message">Message</label><br>
+                 <input type="text" name = "message" id = "message"></input><br>
+                 <input type="submit" id="contact_submit">
+                 </form>
+        </div>
+  </div>
+  </body>
+</html>
